@@ -28,10 +28,36 @@ class casino{
         //}
       }
 
-      void GuessNumber()
+     void GuessNumber()
       {
+          p:
+          int n;
+          char k;
 
-          
+          cout<<endl<<"-----------------------------------------";
+          cout<<endl<<"enter one number (1 to 10):";
+          cin>>n;
+          int r=rand_num();
+          if(n>0 && n<10)
+          {
+
+            if (r==n){
+                    amount_money +=(betting_money*10);
+                    cout<<endl<<"\t\t WINNER.. \n Your balance is now :"<<amount_money<<endl;
+            }
+            else{
+
+                amount_money -=betting_money;
+                cout<<endl<<"Winning number is :"<<r;
+                cout<<endl<<"\t\t LOSER..\n Your balance is now :"<<amount_money;
+            }
+            cout<<endl<<"-----------------------------------------";
+          }
+          else{
+             cout<<endl<<"wrong number,try again..";
+             goto p;
+          }
+
       }
 };
  int main()
