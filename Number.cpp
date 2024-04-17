@@ -60,10 +60,27 @@ class casino{
 
       }
 };
+
  int main()
 {
+
+    char o,k;
     casino c1 ;
+
     c1.Depositemoney();
+    l:
+    cout<<"If you want to change betting money press k otherwise press m and skip this part:";
+    cin>>k;
+    if(k=='k' || k=='K')
+    {  c1.changebetmoney();
+    }
+
     c1.GuessNumber();
+    cout<<endl<<"You want to play again ? (y/n):";
+    cin>>o;
+    if(o=='y' || o=='Y')
+    {
+      goto l;
+    }
     return 0;
 }
