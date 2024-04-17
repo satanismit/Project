@@ -30,7 +30,8 @@ class casino{
 
       void GuessNumber()
       {
-        
+
+          
       }
 };
  int main()
